@@ -22,8 +22,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 					<span>{SITE_TITLE}</span>
 				</div>
 				<nav class="nav">
-					<a href="/privacy-policy">Privacy</a>
-					<a class="cta" href="#early-access">Get early access</a>
+					<a class="cta" href="#contact">Contact</a>
 				</nav>
 			</div>
 		</header>
@@ -39,7 +38,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 							instantly.
 						</p>
 						<div class="actions">
-							<a class="cta" href="#early-access">Join the waitlist</a>
+							<a class="cta" href="#contact">Contact</a>
 							<a class="ghost" href="#flow">See the flow</a>
 						</div>
 						<div class="micro-proof">
@@ -175,43 +174,37 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 			<section class="detail">
 				<div class="container detail-grid">
 					<div class="detail-copy">
-						<h2>Your links, your control.</h2>
-						<p>Pick what to share and keep personal contact info private.</p>
-						<a class="text-link" href="/privacy-policy">Read the privacy policy</a>
+						<h2>Always ready to share.</h2>
+						<p>Pick a card, tap, and let the QR do the work.</p>
 					</div>
 					<div class="detail-media">
-						<div class="detail-image">
-							<img
-								src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=80"
-								alt="People talking during a conference break"
-								loading="lazy"
-							/>
-						</div>
 						<div class="detail-panel">
-							<p class="detail-label">Card setup</p>
-							<div class="detail-row">
-								<span>Title</span>
-								<strong>Portfolio</strong>
+							<p class="detail-label">QR mode</p>
+							<div class="qr-display">
+								<div class="qr-grid">
+									<span></span><span></span><span></span><span></span><span></span>
+									<span></span><span></span><span></span><span></span><span></span>
+									<span></span><span></span><span></span><span></span><span></span>
+									<span></span><span></span><span></span><span></span><span></span>
+									<span></span><span></span><span></span><span></span><span></span>
+								</div>
+								<p>prnsh.site</p>
 							</div>
-							<div class="detail-row">
-								<span>Link</span>
-								<strong>prnsh.site</strong>
-							</div>
-							<button type="button">Save card</button>
+							<button type="button">Show QR</button>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<section id="early-access" class="cta-section">
+			<section id="contact" class="cta-section">
 				<div class="container cta-grid">
 					<div>
-						<h2>Be ready for the next intro.</h2>
-						<p>Join the early list and get first access when Blurb launches.</p>
+						<h2>Questions? Let’s talk.</h2>
+						<p>Reach out for support, feedback, or partnerships.</p>
 					</div>
 					<div class="cta-actions">
-						<a class="cta" href="mailto:hello@blurb.app">Request early access</a>
-						<span>hello@blurb.app</span>
+						<a class="cta" href="mailto:hey@prnsh.site">Email support</a>
+						<span>hey@prnsh.site</span>
 					</div>
 				</div>
 			</section>
@@ -221,8 +214,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 			<div class="container footer-inner">
 				<p>Blurb is a minimalist digital card app for in-person networking.</p>
 				<div class="footer-links">
-					<a href="/privacy-policy">Privacy policy</a>
-					<a href="mailto:hello@blurb.app">Contact</a>
+					<a href="mailto:hey@prnsh.site">Contact</a>
 				</div>
 			</div>
 		</footer>
@@ -785,16 +777,6 @@ main {
 	margin: 0;
 }
 
-.detail-row {
-	display: flex;
-	justify-content: space-between;
-	font-size: 0.95rem;
-}
-
-.detail-row span {
-	color: #6b6b6b;
-}
-
 .detail-panel button {
 	border: none;
 	border-radius: 999px;
@@ -810,17 +792,31 @@ main {
 	gap: 18px;
 }
 
-.detail-image {
-	border-radius: 20px;
-	overflow: hidden;
-	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+.qr-display {
+	display: grid;
+	gap: 14px;
+	justify-items: start;
+	background: #f4f1eb;
+	border-radius: 16px;
+	padding: 16px;
 }
 
-.detail-image img {
-	width: 100%;
-	height: 220px;
-	object-fit: cover;
+.qr-display p {
+	margin: 0;
+	font-weight: 600;
+}
+
+.qr-grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 6px;
+}
+
+.qr-grid span {
 	display: block;
+	width: 18px;
+	height: 18px;
+	background: #111;
 }
 
 .cta-section {
