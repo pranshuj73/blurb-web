@@ -1,254 +1,389 @@
 {
   "meta": {
     "project": "Blurb landing",
-    "version": "0.1",
-    "generatedAt": "2025-01-01",
-    "notes": "Spec-style description of layout, copy, visuals, and motion. Not pixel-accurate."
+    "version": "0.3",
+    "generatedAt": "2026-03-31",
+    "designDirection": "Editorial minimalism with luxury product photography and gallery-like whitespace. Inspired by art catalog layouts, Apple product storytelling, and museum exhibition design.",
+    "notes": "High-end, calm, intentional. The page should feel quiet but confident. Typography and space carry most of the aesthetic weight."
   },
+
   "brand": {
     "name": "Blurb",
-    "tagline": "Minimalist QR cards for real-world intros",
-    "tone": ["minimal", "confident", "warm", "human"],
+    "tagline": "Digital cards for real-world intros",
+    "philosophy": "Networking should feel natural. No searching usernames. No number exchange rituals. Just show a code and continue the conversation.",
+    "tone": ["quiet", "precise", "confident", "modern"],
     "voice": {
       "rules": [
-        "Short sentences",
-        "Avoid buzzwords",
-        "Use verbs that imply speed and clarity",
-        "No mention of phone numbers or waitlists"
+        "Short declarative sentences",
+        "Human language",
+        "Avoid startup clichés",
+        "Avoid 'platform', 'solution', 'revolutionize'",
+        "Emphasize speed and simplicity"
       ]
     }
   },
+
   "designSystem": {
-    "type": {
-      "display": "Space Grotesk",
-      "body": "IBM Plex Sans",
+    "typography": {
+      "display": "Canela",
+      "body": "Söhne",
+      "mono": "IBM Plex Mono",
+
       "sizes": {
-        "heroH1": "clamp(2.4rem, 4vw, 3.8rem)",
-        "sectionH2": "clamp(1.9rem, 3vw, 2.6rem)",
-        "body": "1rem",
+        "heroH1": "clamp(3rem, 5vw, 5.2rem)",
+        "sectionH2": "clamp(2rem, 3vw, 3rem)",
+        "sectionH3": "clamp(1.4rem, 2vw, 1.8rem)",
+        "body": "1.05rem",
         "small": "0.85rem"
       },
+
       "weights": {
-        "display": [500, 600, 700],
+        "display": [400, 500],
         "body": [400, 500, 600]
+      },
+
+      "tracking": {
+        "display": "-0.02em",
+        "body": "0",
+        "caps": "0.12em"
       }
     },
+
     "color": {
-      "background": "#f3f1ec",
-      "ink": "#121212",
-      "inkSoft": "#333333",
-      "paper": "#ffffff",
-      "dark": "#0b0c0e",
-      "accent": "#111111",
-      "accentSoft": "rgba(17, 17, 17, 0.12)",
-      "muted": "#6b6b6b"
+      "background": "#F6F4EF",
+      "ink": "#0D0D0D",
+      "inkSoft": "#2C2C2C",
+      "muted": "#7B7B7B",
+      "paper": "#FFFFFF",
+      "accent": "#0D0D0D",
+      "accentSoft": "rgba(0,0,0,0.08)",
+      "line": "rgba(0,0,0,0.12)",
+      "grainOverlay": "rgba(0,0,0,0.03)"
     },
+
     "radius": {
-      "xl": 28,
-      "lg": 22,
-      "md": 16,
+      "lg": 24,
+      "md": 14,
+      "sm": 8,
       "pill": 999
     },
+
     "shadow": {
-      "soft": "0 12px 24px rgba(0,0,0,0.08)",
-      "media": "0 26px 50px rgba(0,0,0,0.2)",
-      "deep": "0 36px 70px rgba(0,0,0,0.4)"
+      "soft": "0 10px 30px rgba(0,0,0,0.08)",
+      "float": "0 40px 80px rgba(0,0,0,0.18)",
+      "device": "0 60px 120px rgba(0,0,0,0.35)"
     },
+
     "grid": {
-      "maxWidth": 1120,
-      "gutter": "5vw",
+      "maxWidth": 1180,
       "columns": 12,
-      "heroSplit": "6/6",
-      "sectionSplit": "7/5"
+      "gutter": "5vw"
+    },
+
+    "effects": {
+      "grain": true,
+      "noiseTexture": "/textures/noise.png",
+      "softVignette": true,
+      "highlightGlow": "radial-gradient(circle at center, rgba(255,255,255,0.4), transparent 70%)"
     }
   },
+
   "layout": {
+
     "header": {
       "sticky": true,
-      "height": 64,
+      "height": 72,
+      "background": "rgba(246,244,239,0.7)",
+      "blur": "backdrop-filter: blur(10px)",
+
       "content": {
         "logo": {
+          "type": "wordmark",
           "text": "Blurb",
-          "mark": "solid dot",
-          "align": "left"
+          "style": "display font",
+          "size": "1.2rem"
         },
+
         "nav": [
+          {
+            "label": "Flow",
+            "href": "#flow"
+          },
           {
             "label": "Contact",
             "href": "#contact",
-            "style": "primary"
+            "style": "pill"
           }
         ]
       }
     },
+
     "sections": [
+
       {
         "id": "hero",
-        "type": "hero",
+        "type": "heroEditorial",
+
         "background": {
-          "type": "gradient",
-          "value": "linear-gradient(120deg, #f7f5f0 0%, #ece8df 45%, #e0dfdb 100%)"
+          "type": "radial-light",
+          "value": "radial-gradient(circle at 40% 30%, #ffffff 0%, #f6f4ef 45%, #ece9e2 100%)"
         },
+
+        "layout": {
+          "columns": "5 / 7",
+          "verticalPadding": "clamp(6rem, 10vh, 10rem)"
+        },
+
         "copy": {
-          "eyebrow": "Minimalist QR cards for real-world intros",
-          "headline": "Share a link in seconds. No handles. No numbers.",
-          "body": "Save your site once, tap to show a clean QR, and let people open your profile instantly.",
+          "eyebrow": "Digital business cards",
+          "headline": "Show a QR. Start the conversation.",
+          "body": "Blurb lets you share your website or socials instantly. No searching usernames. No exchanging numbers.",
+
           "cta": [
             {
-              "label": "Contact",
-              "href": "#contact",
+              "label": "See how it works",
+              "href": "#flow",
               "style": "primary"
             },
             {
-              "label": "See the flow",
-              "href": "#flow",
+              "label": "Contact",
+              "href": "#contact",
               "style": "ghost"
             }
-          ],
-          "microProof": ["Instant scan", "Privacy-first", "One-tap share"]
-        },
-        "media": {
-          "type": "photo+device",
-          "photo": {
-            "src": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=80",
-            "alt": "Friends connecting at a creative meetup",
-            "crop": "center",
-            "ratio": "4:5"
-          },
-          "device": {
-            "type": "phone mock",
-            "position": "overlap",
-            "scale": 1.0,
-            "screen": {
-              "mode": "dark",
-              "brand": "blurb.",
-              "list": [
-                {"title": "prnsh", "subtitle": "prnsh.site", "badge": "QR"},
-                {"title": "X", "subtitle": "x.com/prnshtwt", "badge": "QR"},
-                {"title": "LinkedIn", "subtitle": "linkedin.com", "badge": "QR"}
-              ]
-            }
-          }
-        },
-        "motion": {
-          "entrance": ["text rise", "media fade"],
-          "ambient": ["subtle glow pulse on logo mark"],
-          "reducedMotion": true
-        }
-      },
-      {
-        "id": "flow",
-        "type": "steps",
-        "copy": {
-          "headline": "Three steps, no friction.",
-          "body": "Create a card, share instantly, connect without the awkward follow-up."
-        },
-        "steps": [
-          {
-            "title": "Create a card",
-            "body": "Paste a website or social link and save it to your list."
-          },
-          {
-            "title": "Share instantly",
-            "body": "Tap a card to open a fullscreen QR ready to scan."
-          },
-          {
-            "title": "Connect without friction",
-            "body": "They scan and land on your profile. No searching. No phone swap."
-          }
-        ],
-        "layout": {
-          "columns": "5/7",
-          "cards": true
-        }
-      },
-      {
-        "id": "features",
-        "type": "feature+panel",
-        "copy": {
-          "headline": "Built for the moment you meet.",
-          "body": "Clean UI, instant QR, and a tidy card list you can update anytime.",
-          "bullets": [
-            "Fullscreen QR with high-contrast scan targets.",
-            "Multiple cards so you choose what to share.",
-            "Share a link, not your number."
           ]
         },
-        "panel": {
-          "label": "Live moment view",
-          "cards": [
-            {"title": "prnsh", "subtitle": "prnsh.site"},
-            {"title": "X", "subtitle": "x.com/prnshtwt", "muted": true}
-          ],
-          "note": "Tap a card → show QR instantly."
-        }
-      },
-      {
-        "id": "detail",
-        "type": "focus",
-        "copy": {
-          "headline": "Always ready to share.",
-          "body": "Pick a card, tap, and let the QR do the work."
+
+        "media": {
+          "type": "heroDevice",
+
+          "composition": "floating",
+
+          "device": {
+            "model": "phone",
+            "angle": "-6deg",
+            "shadow": "device",
+
+            "screen": {
+              "mode": "dark",
+
+              "ui": {
+                "title": "prnsh.site",
+                "qr": "large-centered",
+                "caption": "Scan to open"
+              }
+            }
+          },
+
+          "backgroundElements": [
+            {
+              "type": "giantQR",
+              "opacity": 0.05,
+              "scale": 3.2,
+              "offset": "right"
+            }
+          ]
         },
-        "ui": {
-          "mode": "qr",
-          "label": "QR mode",
-          "value": "prnsh.site",
-          "cta": "Show QR"
+
+        "motion": {
+          "pageLoad": [
+            "headline fade-up",
+            "body fade-up delay-150",
+            "cta fade-up delay-300",
+            "device float-in delay-450"
+          ],
+          "ambient": [
+            "device subtle-float",
+            "light vignette pulse"
+          ]
         }
       },
+
+      {
+        "id": "flow",
+        "type": "processGallery",
+
+        "copy": {
+          "headline": "Three steps. That’s it.",
+          "body": "Blurb removes the awkward part of networking."
+        },
+
+        "steps": [
+
+          {
+            "index": "01",
+            "title": "Create a card",
+            "body": "Paste a website or social link and save it.",
+            "visual": "phone-card-list"
+          },
+
+          {
+            "index": "02",
+            "title": "Show the QR",
+            "body": "Tap a card and the QR fills the screen.",
+            "visual": "qr-fullscreen"
+          },
+
+          {
+            "index": "03",
+            "title": "They open your page",
+            "body": "One scan. Your site loads instantly.",
+            "visual": "scan-animation"
+          }
+
+        ],
+
+        "layout": {
+          "style": "editorial horizontal panels",
+          "panelWidth": "420px",
+          "scrollInteraction": "snap"
+        }
+      },
+
+      {
+        "id": "features",
+        "type": "minimalFeatureGrid",
+
+        "copy": {
+          "headline": "Built for real moments.",
+          "body": "Clean, fast, and designed for in-person interactions."
+        },
+
+        "features": [
+
+          {
+            "title": "Instant QR",
+            "body": "Every card generates a scannable code automatically."
+          },
+
+          {
+            "title": "Multiple cards",
+            "body": "Share different profiles depending on the moment."
+          },
+
+          {
+            "title": "Privacy first",
+            "body": "Share a link. Keep your number private."
+          },
+
+          {
+            "title": "Always ready",
+            "body": "Open the app and the QR is seconds away."
+          }
+
+        ],
+
+        "layout": {
+          "grid": "2x2",
+          "style": "large typography cards"
+        }
+      },
+
+      {
+        "id": "qrMoment",
+        "type": "immersiveShowcase",
+
+        "copy": {
+          "headline": "The moment of connection.",
+          "body": "A quick scan replaces the awkward exchange."
+        },
+
+        "visual": {
+          "type": "largeQR",
+
+          "composition": {
+            "centered": true,
+            "size": "320px"
+          },
+
+          "surroundingUI": {
+            "cardName": "prnsh.site",
+            "modeLabel": "QR view"
+          }
+        }
+      },
+
       {
         "id": "contact",
-        "type": "cta",
+        "type": "ctaEditorial",
+
         "copy": {
-          "headline": "Questions? Let’s talk.",
-          "body": "Reach out for support, feedback, or partnerships."
+          "headline": "Questions?",
+          "body": "Reach out for feedback, partnerships, or support."
         },
+
         "actions": [
           {
-            "label": "Email support",
+            "label": "Email",
             "href": "mailto:hey@prnsh.site",
             "style": "primary"
-          },
-          {
-            "label": "hey@prnsh.site",
-            "style": "secondary"
           }
-        ]
+        ],
+
+        "background": {
+          "type": "paper",
+          "borderTop": true
+        }
       }
+
     ],
+
     "footer": {
-      "copy": "Blurb is a minimalist digital card app for in-person networking.",
+      "style": "minimal",
+
+      "copy": "Blurb — minimalist digital cards for in-person networking.",
+
       "links": [
-        {"label": "Contact", "href": "mailto:hey@prnsh.site"}
+        {
+          "label": "Contact",
+          "href": "mailto:hey@prnsh.site"
+        }
       ]
     }
   },
+
+  "motion": {
+    "philosophy": "Motion should feel physical and calm. Avoid flashy animations. Favor slow easing and staggered reveals.",
+
+    "timings": {
+      "fast": "180ms",
+      "normal": "320ms",
+      "slow": "700ms"
+    },
+
+    "easing": {
+      "default": "cubic-bezier(0.22,1,0.36,1)"
+    }
+  },
+
   "assets": {
+
     "icons": {
       "favicon": "/icons/favicon.ico",
       "appleTouch": "/icons/apple-touch-icon.png",
       "appIcon": "/icons/icon-192.png"
     },
-    "images": [
+
+    "textures": [
       {
-        "role": "hero",
-        "src": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=80",
-        "usage": "Networking meetup vibe, warm, people-focused"
+        "name": "grain",
+        "src": "/textures/grain.png"
       }
     ]
   },
+
   "accessibility": {
-    "contrast": "Text on imagery requires overlay or tonal safe area",
+    "contrast": "WCAG AA minimum",
     "reducedMotion": true,
-    "focusStates": "Visible outline for buttons and links"
+    "focusStates": "visible outline with offset"
   },
+
   "responsive": {
-    "breakpoints": [600, 900, 1200],
+    "breakpoints": [640, 900, 1200],
+
     "mobile": {
-      "hero": "stacked, media below copy",
-      "nav": "stacked",
-      "phoneMock": "centered"
+      "hero": "stacked",
+      "heroDevice": "centered",
+      "flow": "vertical cards"
     }
   }
 }
