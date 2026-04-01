@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 import { ArrowRight } from 'lucide';
+import storeLinks from '../data/links.json';
 ---
 
 <!DOCTYPE html>
@@ -20,8 +21,7 @@ import { ArrowRight } from 'lucide';
 			<div class="container header-inner">
 				<div class="logo">Blurb</div>
 				<nav class="nav">
-					<a href="#flow">Flow</a>
-					<a class="pill" href="#contact">Contact</a>
+					<a class="pill" href={storeLinks.playstore}>Download</a>
 				</nav>
 			</div>
 		</header>
@@ -34,7 +34,7 @@ import { ArrowRight } from 'lucide';
 					<h1>Share your site in one scan.</h1>
 					<p class="lead">Blurb turns any link into a QR card you can show instantly.</p>
 					<div class="hero-actions">
-						<a class="cta" href="https://blurb.prnsh.site">View on Play Store</a>
+						<a class="cta" href={storeLinks.playstore}>View on Play Store</a>
 						<a class="ghost" href="#contact">Contact</a>
 					</div>
 					</div>
