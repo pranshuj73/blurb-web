@@ -1,0 +1,406 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import { SITE_TITLE } from '../config';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead
+			title={`Privacy Policy | ${SITE_TITLE}`}
+			description="How Blurb handles the links you save and share."
+		/>
+	</head>
+	<body>
+		<div class="privacy-shell">
+			<header class="privacy-header">
+				<div class="privacy-header-inner">
+					<a class="brand" href="/">Blurb</a>
+					<a class="back-link" href="/">Back to home</a>
+				</div>
+			</header>
+
+			<main class="privacy-main">
+				<section class="privacy-hero">
+					<p class="eyebrow">Privacy Policy</p>
+					<h1>Clear and minimal, just like the app.</h1>
+					<p class="intro">
+						Blurb is built to help you share links quickly in person. This page explains what
+						data the app stores, what it does not collect, and how that information is used.
+					</p>
+					<div class="meta-row">
+						<span>Effective date</span>
+						<strong>March 31, 2026</strong>
+					</div>
+				</section>
+
+				<section class="policy-grid">
+					<aside class="policy-nav">
+						<p>On this page</p>
+						<nav>
+							<a href="#information-collected">Information collected</a>
+							<a href="#how-it-is-used">How it is used</a>
+							<a href="#storage">Data storage</a>
+							<a href="#third-party-links">Third-party links</a>
+							<a href="#data-sharing">Data sharing</a>
+							<a href="#security">Security</a>
+							<a href="#changes">Policy changes</a>
+							<a href="#contact">Contact</a>
+						</nav>
+					</aside>
+
+					<div class="policy-content">
+						<section id="information-collected" class="policy-block">
+							<h2>Information collected</h2>
+							<p>
+								Blurb is designed to keep data collection minimal. The app only stores the
+								information required to create and display the links you choose to share.
+							</p>
+							<h3>Information you provide</h3>
+							<ul>
+								<li>Website URLs</li>
+								<li>Social media links</li>
+								<li>Optional titles or labels for cards</li>
+							</ul>
+							<p>
+								This information is used only to generate and display QR codes for sharing.
+							</p>
+							<h3>Information Blurb does not collect</h3>
+							<ul>
+								<li>Phone numbers</li>
+								<li>Email addresses</li>
+								<li>Contact lists</li>
+								<li>Device contacts</li>
+							</ul>
+							<p>Blurb does not track or log who scans your QR codes.</p>
+						</section>
+
+						<section id="how-it-is-used" class="policy-block">
+							<h2>How it is used</h2>
+							<p>Information saved in Blurb is used only to:</p>
+							<ul>
+								<li>Store links you add as cards</li>
+								<li>Generate QR codes from those links</li>
+								<li>Display your saved cards in the app</li>
+							</ul>
+							<p>
+								Blurb does not use this information for advertising, analytics profiling, or
+								marketing.
+							</p>
+						</section>
+
+						<section id="storage" class="policy-block">
+							<h2>Data storage</h2>
+							<p>
+								Depending on the app implementation, card data may be stored locally on your
+								device. If cloud sync or account features are added in the future, this policy
+								will be updated before those changes take effect.
+							</p>
+						</section>
+
+						<section id="third-party-links" class="policy-block">
+							<h2>Third-party links</h2>
+							<p>
+								Blurb cards can point to external websites and social platforms. When someone
+								scans your QR code, they are taken directly to that external service.
+							</p>
+							<p>
+								Blurb is not responsible for the privacy practices of third-party websites or
+								platforms.
+							</p>
+						</section>
+
+						<section id="data-sharing" class="policy-block">
+							<h2>Data sharing</h2>
+							<p>Blurb does not sell, rent, or share user data with third parties.</p>
+							<p>
+								The only information shared is the link encoded inside the QR code when you
+								choose to display it.
+							</p>
+						</section>
+
+						<section id="security" class="policy-block">
+							<h2>Security</h2>
+							<p>
+								Reasonable steps are taken to protect stored data, but no digital system can
+								guarantee absolute security.
+							</p>
+							<p>
+								Only add links you are comfortable sharing publicly, and make sure those links
+								point to safe destinations.
+							</p>
+						</section>
+
+						<section id="changes" class="policy-block">
+							<h2>Policy changes</h2>
+							<p>
+								This Privacy Policy may be updated from time to time. When that happens, the
+								effective date at the top of the page will be updated as well.
+							</p>
+						</section>
+
+						<section id="contact" class="policy-block contact-block">
+							<h2>Contact</h2>
+							<p>If you have questions about this policy, contact:</p>
+							<a class="contact-link" href="mailto:hey@prnsh.site">hey@prnsh.site</a>
+						</section>
+					</div>
+				</section>
+			</main>
+		</div>
+	</body>
+</html>
+
+<style>
+	:global(body) {
+		margin: 0;
+		padding: 0;
+		max-width: 100%;
+		font-family: 'IBM Plex Sans', sans-serif;
+		color: #111;
+		background:
+			radial-gradient(circle at top, rgba(255, 255, 255, 0.8), transparent 44%),
+			linear-gradient(180deg, #f7f5ef 0%, #f2efe7 100%);
+	}
+
+	:global(*) {
+		box-sizing: border-box;
+	}
+
+	:global(a) {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	.privacy-shell {
+		min-height: 100svh;
+	}
+
+	.privacy-header {
+		position: sticky;
+		top: 0;
+		z-index: 10;
+		backdrop-filter: blur(12px);
+		background: rgba(247, 245, 239, 0.78);
+		border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+	}
+
+	.privacy-header-inner {
+		width: min(1120px, calc(100vw - 40px));
+		margin: 0 auto;
+		padding: 16px 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 16px;
+	}
+
+	.brand {
+		font-family: 'Instrument Serif', serif;
+		font-size: 1.4rem;
+		letter-spacing: -0.02em;
+	}
+
+	.back-link {
+		padding: 10px 16px;
+		border-radius: 999px;
+		border: 1px solid rgba(17, 17, 17, 0.12);
+		font-size: 0.95rem;
+	}
+
+	.privacy-main {
+		width: min(1120px, calc(100vw - 40px));
+		margin: 0 auto;
+		padding: 48px 0 72px;
+	}
+
+	.privacy-hero {
+		display: grid;
+		gap: 18px;
+		max-width: 760px;
+		padding: 20px 0 44px;
+	}
+
+	.eyebrow {
+		font-family: 'IBM Plex Mono', monospace;
+		text-transform: uppercase;
+		letter-spacing: 0.14em;
+		font-size: 0.72rem;
+		color: #787878;
+		margin: 0;
+	}
+
+	h1 {
+		margin: 0;
+		font-family: 'Instrument Serif', serif;
+		font-size: clamp(3rem, 7vw, 5rem);
+		letter-spacing: -0.03em;
+		line-height: 0.98;
+		max-width: 11ch;
+	}
+
+	.intro {
+		margin: 0;
+		max-width: 60ch;
+		font-size: 1.08rem;
+		line-height: 1.7;
+		color: #2f2f2f;
+	}
+
+	.meta-row {
+		display: inline-flex;
+		align-items: center;
+		gap: 12px;
+		width: fit-content;
+		padding: 10px 14px;
+		border-radius: 999px;
+		background: rgba(255, 255, 255, 0.68);
+		border: 1px solid rgba(17, 17, 17, 0.08);
+		font-size: 0.92rem;
+	}
+
+	.meta-row span {
+		color: #767676;
+	}
+
+	.policy-grid {
+		display: grid;
+		grid-template-columns: 240px minmax(0, 1fr);
+		gap: 40px;
+		align-items: start;
+	}
+
+	.policy-nav {
+		position: sticky;
+		top: 86px;
+		display: grid;
+		gap: 16px;
+		padding: 22px 20px;
+		border-radius: 22px;
+		background: rgba(255, 255, 255, 0.6);
+		border: 1px solid rgba(17, 17, 17, 0.08);
+	}
+
+	.policy-nav p {
+		margin: 0;
+		font-family: 'IBM Plex Mono', monospace;
+		font-size: 0.75rem;
+		letter-spacing: 0.14em;
+		text-transform: uppercase;
+		color: #787878;
+	}
+
+	.policy-nav nav {
+		display: grid;
+		gap: 12px;
+	}
+
+	.policy-nav a {
+		font-size: 0.96rem;
+		color: #282828;
+	}
+
+	.policy-content {
+		display: grid;
+		gap: 22px;
+	}
+
+	.policy-block {
+		padding: 28px 30px;
+		border-radius: 26px;
+		background: rgba(255, 255, 255, 0.76);
+		border: 1px solid rgba(17, 17, 17, 0.08);
+		box-shadow: 0 14px 34px rgba(0, 0, 0, 0.05);
+	}
+
+	.policy-block h2 {
+		margin: 0 0 14px;
+		font-family: 'Instrument Serif', serif;
+		font-size: 2rem;
+		letter-spacing: -0.02em;
+	}
+
+	.policy-block h3 {
+		margin: 24px 0 10px;
+		font-size: 1rem;
+	}
+
+	.policy-block p {
+		margin: 0;
+		color: #303030;
+		line-height: 1.7;
+	}
+
+	.policy-block ul {
+		margin: 14px 0 0;
+		padding-left: 18px;
+		color: #303030;
+		line-height: 1.7;
+	}
+
+	.policy-block li + li {
+		margin-top: 4px;
+	}
+
+	.contact-block {
+		display: grid;
+		gap: 14px;
+	}
+
+	.contact-link {
+		width: fit-content;
+		padding: 12px 18px;
+		border-radius: 999px;
+		background: #111;
+		color: #fff;
+	}
+
+	@media (max-width: 900px) {
+		.policy-grid {
+			grid-template-columns: 1fr;
+			gap: 24px;
+		}
+
+		.policy-nav {
+			position: static;
+		}
+	}
+
+	@media (max-width: 640px) {
+		.privacy-header-inner,
+		.privacy-main {
+			width: min(100vw - 28px, 1120px);
+		}
+
+		.privacy-main {
+			padding: 28px 0 56px;
+		}
+
+		.privacy-hero {
+			padding: 8px 0 28px;
+		}
+
+		h1 {
+			font-size: clamp(2.35rem, 12vw, 3.4rem);
+			max-width: 10ch;
+		}
+
+		.intro {
+			font-size: 1rem;
+		}
+
+		.policy-block {
+			padding: 22px 20px;
+			border-radius: 22px;
+		}
+
+		.policy-block h2 {
+			font-size: 1.7rem;
+		}
+
+		.back-link,
+		.contact-link {
+			font-size: 0.92rem;
+		}
+	}
+</style>
