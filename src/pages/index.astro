@@ -30,9 +30,9 @@ import storeLinks from '../data/links.json';
 			<section class="hero" id="top">
 				<div class="container hero-grid">
 					<div class="hero-copy">
-					<p class="eyebrow">Digital business cards</p>
+					<p class="eyebrow">For meetups and in-person intros</p>
 					<h1>Share who you are instantly.</h1>
-					<p class="lead">Save your socials, website, and other links once. At meetups, just show your QR and let people open the right page immediately.</p>
+					<p class="lead">Your identity, ready to share.<br />Save your links once and share them instantly.</p>
 					<div class="hero-actions">
 						<a class="cta" href={storeLinks.playstore}>View on Play Store</a>
 						<a class="ghost" href="#contact">Contact</a>
@@ -258,10 +258,10 @@ import storeLinks from '../data/links.json';
 	--ease: cubic-bezier(0.22, 1, 0.36, 1);
 	--section-pad: 96px;
 	--hero-pad: clamp(6rem, 10vh, 10rem);
-	--hero-gap: 56px;
-	--hero-max-width: 500px;
+	--hero-gap: 44px;
+	--hero-max-width: 680px;
 	--hero-lead-size: 1.06rem;
-	--hero-lead-width: 480px;
+	--hero-lead-width: 620px;
 	--hero-bg: radial-gradient(circle at 40% 30%, #ffffff 0%, #f6f4ef 45%, #ece9e2 100%);
 	--hero-qr-size: 400px;
 	--hero-qr-opacity: 0.04;
@@ -380,7 +380,7 @@ main {
 
 .hero-grid {
 	display: grid;
-	grid-template-columns: 5fr 7fr;
+	grid-template-columns: 6fr 6fr;
 	gap: var(--hero-gap);
 	align-items: center;
 }
